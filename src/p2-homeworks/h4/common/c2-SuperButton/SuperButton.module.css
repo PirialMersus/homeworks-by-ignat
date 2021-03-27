@@ -1,0 +1,81 @@
+@keyframes blink {
+    0% {
+        left: -130%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+.buttonsCommonClass {
+    position: relative;
+    overflow: hidden;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.buttonsCommonClass:after {
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -130%;
+    top: 0;
+    height: 100%;
+    width: 20%;
+
+    transform: skew(45deg);
+
+    background-color: #ffffff;
+    opacity: 0.7;
+
+    z-index: 14;
+}
+
+.buttonsCommonClass:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+
+.buttonsCommonClass:hover:after {
+    animation: blink 0.35s ease;
+}
+
+.buttonsCommonClass:hover:before {
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -100vw;
+    top: 0;
+    height: 100vh;
+    width: 300vw;
+
+    background-color: #fff;
+    opacity: 0.2;
+
+    z-index: 7;
+}
+
+.buttonsCommonClass:disabled {
+    opacity: 0.8;
+    color: beige;
+}
+.buttonsCommonClass:disabled::after {
+    opacity: 0;
+}
+.buttonsCommonClass:disabled::before {
+    opacity: 0;
+}
+
+.red {
+    background: red;
+}

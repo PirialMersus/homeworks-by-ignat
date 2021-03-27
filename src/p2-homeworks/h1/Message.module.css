@@ -1,0 +1,58 @@
+.message {
+    /*width: 500px;*/
+    padding: 5px;
+    background-color: #b5e51d;
+    display: inline-flex;
+    align-items: flex-end;
+}
+/*.icon {*/
+/*    align-self: flex-end;*/
+/*}*/
+.icon img {
+    height: 60px;
+    border-radius: 50%;
+    padding: 0 20px;
+    display: block;
+}
+.angle{
+width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, #082103 0);
+}
+
+.messageContent {
+    border-radius: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: #082103;
+    display: flex;
+    position: relative;
+}
+
+.namePlusMessage {
+
+    padding: 5px;
+}
+
+.namePlusMessage h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 20px;
+    color: #9389a5;
+}
+
+.namePlusMessage p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #9eb299;
+}
+
+.time {
+    align-self: flex-end;
+}
+.time span {
+    color: #314a2c;
+    font-size: 22px;
+}

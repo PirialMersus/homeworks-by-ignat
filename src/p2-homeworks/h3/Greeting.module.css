@@ -1,0 +1,31 @@
+.container {
+    padding: 10px;
+    padding-bottom: 30px;
+
+}
+.container button {
+    margin-right: 10px;
+}
+
+.inputContainer {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.inputContainer p {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 14px;
+}
+.inputContainer input {
+    min-height: 20px;
+    min-width: 150px;
+}
+
+
+.error {
+    border: 1px solid red;
+    background-color: rgba(126, 74, 52, 0.3);
+}
