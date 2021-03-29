@@ -1,7 +1,8 @@
 .spanClass {
+    display: inline-block;
     cursor: pointer;
-    margin: 10px;
-    padding: 3px;
+    margin: 4px;
+    padding: 10px 20px;
     background: #E9EFF6;
-    border-radius: 10px;
+    border-radius: 20px;
 }

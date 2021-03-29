@@ -22,7 +22,7 @@
 .header {
     margin: 30px 0;
     transform: translateX(-380px);
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +42,7 @@
     color: #f300b4;
 }
 
-.header.active {
+.header:hover {
     transform: translateX(0);
 }
 .menuButton {
@@ -61,7 +61,7 @@
     width: 30px;
     height: 3px;
     background: #150f0f;
-    transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .menuButton span {
@@ -86,24 +86,24 @@
     background: #f300b4;
 }
 
-.header.active .menuButton > span {
+.header:hover .menuButton > span {
     background: transparent;
 }
 
-.header.active .menuButton span::after {
+.header:hover .menuButton span::after {
     background: #f300b4;
 }
 
-.header.active .menuButton span::before {
+.header:hover .menuButton span::before {
     background: #f300b4;
 }
 
-.header.active .menuButton > span::before {
+.header:hover .menuButton > span::before {
     transform: rotate(-225deg);
     top: 0px;
 }
 
-.header.active .menuButton > span::after {
+.header:hover .menuButton > span::after {
     transform: rotate(225deg);
     top: 0px;
 }
