@@ -1,0 +1,11 @@
+.date_invisible {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s all ease;
+}
+
+.date_visible {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s all ease;
+}
