@@ -1,3 +1,11 @@
-.range {
+.wrapper {
+    position: relative;
+}
+.wrapper > input{
+    margin-left: 25px;
+}
 
+.spans {
+    width: 30px;
+    position: absolute;
 }

@@ -32,8 +32,8 @@ const SuperRange: React.FC<SuperRangePropsType> = (
     const finalRangeClassName = `${s.range} ${className ? className : ""}`;
 
     return (
-        <div>
-            <span>{value}</span>
+        <div className={s.wrapper}>
+            <span className={s.spans}>{value}</span>
             <input
                 value={value}
                 type={"range"}

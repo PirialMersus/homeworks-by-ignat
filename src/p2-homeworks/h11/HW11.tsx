@@ -3,8 +3,28 @@ import SuperRange from "./common/c7-SuperRange/SuperRange";
 import SuperDoubleRange from "./common/c8-SuperDoubleRange/SuperDoubleRange";
 
 function HW11() {
-    const [value1, setValue1] = useState(50);
-    const [value2, setValue2] = useState(100);
+    const [value1, setValue1] = useState(20);
+    const [value2, setValue2] = useState<number[]>([20, 80]);
+    if (value1 !== value2[0]){
+
+    }
+
+    const handleChangeSuperDoubleRange = (event: any, newValue: number | number[]) => {
+        setValue2(newValue as number[]);
+        if (Array.isArray(newValue)){
+            setValue1(newValue[0])
+        }
+    };
+
+    const handleChangeSuperRange = (value: number) => {
+        if(value >= value2[1]){
+            setValue2([value2[1],value2[1]])
+            setValue1(value2[1])
+        }
+        setValue2(prevState => [value, prevState[1]])
+        // console.log('1231231')
+        setValue1(value)
+    }
 
     return (
         <div>
@@ -15,9 +35,9 @@ function HW11() {
             <div>
 
                 <SuperRange
-                    onChangeRange={setValue1}
+                    onChangeRange={handleChangeSuperRange}
                     value={value1}
-                    value2={value2}
+                    value2={value2[1]}
                     // сделать так чтоб value1 изменялось
                 />
             </div>
@@ -27,7 +47,8 @@ function HW11() {
                 <SuperDoubleRange
                     value={value1}
                     value2={value2}
-                    onChangeRange={setValue1}
+                    onChangeRange={handleChangeSuperRange}
+                    handleChange={handleChangeSuperDoubleRange}
                     // сделать так чтоб value1 и value2 изменялось
                 />
 
