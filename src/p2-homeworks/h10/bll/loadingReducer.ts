@@ -14,8 +14,10 @@ export const loadingReducer = (state: LoadingStateType = initState, action: Load
         case "SET_IS_LOADING": {
             return {...state, isLoading: action.isLoading}
         }
-        default: return state;
+        default:
+            return state;
     }
 };
 
-export const loadingAC = (isLoading: boolean): LoadingActionType => ({type: "SET_IS_LOADING", isLoading}); // fix any
+export const loadingAC = (isLoading: boolean): LoadingActionType =>
+    ({type: "SET_IS_LOADING", isLoading}); // fix any
